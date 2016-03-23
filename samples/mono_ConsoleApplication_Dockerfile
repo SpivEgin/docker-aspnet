@@ -1,0 +1,8 @@
+FROM gutek/aspnet-core:update1-mono
+
+COPY . /app
+WORKDIR /app
+
+RUN ["dnu", "restore"]
+
+ENTRYPOINT ["dnx", "run"]
